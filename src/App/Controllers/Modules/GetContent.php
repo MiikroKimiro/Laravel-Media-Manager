@@ -52,7 +52,7 @@ trait GetContent
         // folders
         foreach ($storageFolders as $folder) {
             $path = $folder['path'];
-            $time = $folder['timestamp'];
+            $time = $folder['timestamp'] ?? null;
 
             if ($this->GFI) {
                 $info = $this->getFolderInfoFromList($this->getFolderContent($path, true));
